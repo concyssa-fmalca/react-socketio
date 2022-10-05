@@ -42,10 +42,10 @@
         formulario.addEventListener('submit',(ev)=>{
             ev.preventDefault();
             const nuevoMensaje = txtMensaje.value;                        
-            socket.emit('message-to-server',{texto:nuevoMensaje})
+            socket.emit('mensaje-to-server',{texto:nuevoMensaje})
         })
         
-        socket.on('message-from-server', (data) => {
+        socket.on('mensaje-from-server', (data) => {
             mensajes.innerHTML += `<li>${data.texto}</li>`          
         });
     </script>
