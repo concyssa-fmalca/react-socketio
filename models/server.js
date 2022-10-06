@@ -23,7 +23,7 @@ class Server {
         this.app.use( express.static( path.resolve(__dirname,'../public')));
         console.log("Se aplicó CORS");
         this.app.use(cors({
-            origin: '*'
+            origin: 'http://concyssa.pe'
         }));
     }
 
