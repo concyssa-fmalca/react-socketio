@@ -19,12 +19,19 @@ class Server {
     }
 
     middlewares() {
+
+        console.log("Se aplicó CORS");
+        this.app.use(cors());
+
+
         //Desplegar directorio público
         this.app.use( express.static( path.resolve(__dirname,'../public')));
-        console.log("Se aplicó CORS");
-        this.app.use(cors({
-            origin: 'http://concyssa.pe'
-        }));
+
+        /*
+        this.app.get("/", function (req,res,next){
+            consol.log("CORS enabled");
+        })
+        */
     }
 
     configurarSockets() {
