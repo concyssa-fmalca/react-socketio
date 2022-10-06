@@ -22,7 +22,9 @@ class Server {
         //Desplegar directorio público
         this.app.use( express.static( path.resolve(__dirname,'../public')));
 
-        this.app.use(cors());
+        this.app.use(cors({
+            origin: '*'
+        }));
     }
 
     configurarSockets() {
