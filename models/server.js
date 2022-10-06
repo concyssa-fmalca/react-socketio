@@ -25,13 +25,13 @@ class Server {
 
 
         //Desplegar directorio público
-        this.app.use( express.static( path.resolve(__dirname,'../public')));
+        //this.app.use( express.static( path.resolve(__dirname,'../public')));
 
-        /*
+        
         this.app.get("/", function (req,res,next){
             consol.log("CORS enabled");
         })
-        */
+        
     }
 
     configurarSockets() {
