@@ -21,7 +21,7 @@ class Server {
     middlewares() {
         //Desplegar directorio público
         this.app.use( express.static( path.resolve(__dirname,'../public')));
-
+        console.log("Se aplicó CORS");
         this.app.use(cors({
             origin: '*'
         }));
